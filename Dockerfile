@@ -6,8 +6,8 @@ MAINTAINER Efim Polevoi <fimkap@gmail.com>
 ########################################
 
 # Better terminal support
-ENV TERM screen-256color
-ENV DEBIAN_FRONTEND noninteractive
+# ENV TERM screen-256color
+# ENV DEBIAN_FRONTEND noninteractive
 
 # Update and install
 RUN apt-get update && apt-get install -y \
@@ -49,3 +49,4 @@ RUN  git clone -b v0.3.1 https://github.com/neovim/neovim.git && \
   cd ../ && rm -rf neovim
 
 COPY init.vim /root/.config/nvim/init.vim
+COPY google-java-format-1.6-all-deps.jar /root/
