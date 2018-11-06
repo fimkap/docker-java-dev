@@ -17,6 +17,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'davidhalter/jedi-vim'
 call plug#end()
 let mapleader      = ' '
 let maplocalleader = ' '

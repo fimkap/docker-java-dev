@@ -41,6 +41,9 @@ RUN apt-get update && apt-get install -y \
 RUN pip install neovim
 RUN pip3 install neovim
 
+# Install jedi coompletion engine
+RUN pip install jedi
+
 # Install Neovim
 RUN  git clone -b v0.3.1 https://github.com/neovim/neovim.git && \
   cd neovim && \
