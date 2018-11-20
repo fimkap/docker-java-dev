@@ -47,9 +47,12 @@ RUN pip install jedi
 # Install Neovim
 RUN  git clone -b v0.3.1 https://github.com/neovim/neovim.git && \
   cd neovim && \
-  make && \
+  make CMAKE_BUILD_TYPE=Release && \
   make install && \
   cd ../ && rm -rf neovim
 
 COPY init.vim /root/.config/nvim/init.vim
 COPY google-java-format-1.6-all-deps.jar /root/
+
+# Install neovim plugins
+RUN nvim -i NONE -c PlugInstall -c quitall > /dev/null 2>&1
