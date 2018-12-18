@@ -20,6 +20,7 @@ Plug 'google/vim-glaive'
 Plug 'ludovicchabant/vim-gutentags'
 " Plug 'airblade/vim-rooter'
 Plug 'davidhalter/jedi-vim'
+Plug 'tpope/vim-dadbod'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 augroup nerd_loader
     autocmd!
@@ -152,3 +153,5 @@ hi EndOfBuffer guibg=bg guifg=bg
 hi VertSplit guibg=bg guifg=bg
 hi LineNr guibg=bg
 hi SignColumn guibg=bg
+
+" :DB w:db = postgresql://postgres@172.17.0.2:5432/postgres
