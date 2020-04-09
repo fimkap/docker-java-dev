@@ -1,4 +1,4 @@
-FROM maven:3.5.4-jdk-8
+FROM openjdk:15-slim
 MAINTAINER Efim Polevoi <fimkap@gmail.com>
 
 ########################################
@@ -38,14 +38,14 @@ RUN apt-get update && apt-get install -y \
       unzip
 
 # Install python linting and neovim plugin
-RUN pip install neovim
-RUN pip3 install neovim
+RUN pip install pynvim
+RUN pip3 install pynvim
 
 # Install jedi coompletion engine
 RUN pip install jedi
 
 # Install Neovim
-RUN  git clone -b v0.3.1 https://github.com/neovim/neovim.git && \
+RUN  git clone -b v0.4.3 https://github.com/neovim/neovim.git && \
   cd neovim && \
   make CMAKE_BUILD_TYPE=Release && \
   make install && \
